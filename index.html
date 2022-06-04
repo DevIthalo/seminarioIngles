@@ -6,51 +6,135 @@
     <title>Nação Reggueira</title>
     <link rel="icon" type="imagem/png" href="style/icon_bob.png">
     <link rel="stylesheet" href="style/style.css">
-    
+
 </head>
 
 <body>
-    <header>
-        <h1>NAÇÃO REGGUEIRA</h1>
-    </header>
-    <div class="card">
-        <h1 id="titleName"></h1>
-        <div id="cardText">
-            <div id="initialText">
-                <h1>Group Members</h1>
-                <p><img src="style/reggae.png" alt="">Arthur</p>
-                <p><img src="style/reggae2.png" alt="">Davi</p>
-                <p><img src="style/reggae3.png" alt="">Gefferson</p>
-                <p><img src="style/reggae4.png" alt="">Ithalo</p>
-                <p><img src="style/reggae5.png" alt="">Pedro</p>
-                <p><img src="style/reggae6.png" alt="">Wesley</p>
-            </div>
-            <div id="objetivos">
-                <h1>Obejtivos e Tópicos</h1>
-                <h3>Aqui teŕa os objetivos!</h3>
-                <div>
-                    <h2><a href="https://docs.python.org/3/reference/datamodel.html" target="_blank">Data model</a></h2>
-                    <p>Arthur => Objects, values and types + The standard type hierarchy</p>
-                    <p>Davi => [ASSUNTO QUE VAI FALAR]</p>
-                    <p>Gefferson => [ASSUNTO QUE VAI FALAR]</p>
-                    <p>Ithalo => [ASSUNTO QUE VAI FALAR]</p>
-                    <p>Pedro => [ASSUNTO QUE VAI FALAR]</p>
-                    <p>Wesley => [ASSUNTO QUE VAI FALAR]</p>
-                </div>
-            </div>
+<header>
+    <h1>NAÇÃO REGGUEIRA</h1>
+</header>
+<section id="sectionot" class="container">
+    <div id="rt1" class="card">
+        <div class="img">
+            <img src="style/reggae.png" alt="">
         </div>
+        <h2 class="assunto">Arthur</h2>
+        <div class="conteudo">
+            Objects, values and types
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 1)">Open</a></div>
     </div>
-    <div class="btns">
-        <button class="efeito efeito-1" onclick="avancarCard()">Next</button>
+
+    <div id="rt2" class="card">
+        <div class="img">
+            <img src="style/reggae2.png" alt="">
+        </div>
+        <h2 class="assunto">Ithalo</h2>
+        <div class="conteudo">
+            The standard type hierarchy
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 4)">Open</a></div>
     </div>
-    <div class="btns2">
-        <button class="efeito efeito-1" onclick="voltarCard()">Back</button>
+
+    <div id="rt3" class="card">
+        <div class="img">
+            <img src="style/reggae3.png" alt="">
+        </div>
+        <h2 class="assunto">Davi</h2>
+        <div class="conteudo">
+            numbers.Number
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 2)">Open</a></div>
     </div>
-    <footer>
-        <p>
-            <span class="piscar">&copy; TADS</span>
-        </p>
-    </footer>
+
+    <div id="rt4" class="card">
+        <div class="img">
+            <img src="style/reggae4.png" alt="">
+        </div>
+        <h2 class="assunto">Pedro</h2>
+        <div class="conteudo">
+            Sequences
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 5)">Open</a></div>
+    </div>
+
+    <div id="rt5" class="card">
+        <div  class="img" >
+            <img src="style/reggae5.png" alt="">
+        </div>
+        <h2 class="assunto">Gefferson</h2>
+        <div class="conteudo">
+            Mutable sequences
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 3)">Open</a></div>
+    </div>
+
+    <div id="rt6" class="card">
+        <div class="img">
+            <img src="style/reggae6.png" alt="">
+        </div>
+        <h2 class="assunto">Wesley</h2>
+        <div class="conteudo">
+            Mappings
+        </div>
+        <div class="butao"><a onclick="verConteudo('dv-modal', 6)">Open</a></div>
+    </div>
+    <!-- Incio do modal -->
+    <div id="dv-modal" class="modal"><!--Div mãe do modal-->
+        <div class="body-modal"><!--Corpo Modal que vai conter todo o modal-->
+
+            <div class="subtitle-modal">
+
+            <div id="subtitle-p">
+                <p>
+                    <span id="span-one"></span>Gramática
+                </p>
+                <p>
+                    <span id="span-two"></span>Conteúdo Técnico
+                </p>
+                <p >
+                    <span id="span-three"></span>Modal
+                </p>
+            </div>
+            </div>
+            
+            <div class="modal-options"><!--Opções do modal - fechar e alterar conteudo -->
+
+                <button class="left" onclick="verConteudo('dv-modal', 'back')">
+                    <svg  viewBox="0 0 50 80" xml:space="preserve">
+                      <polyline fill="none"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                      45.63,75.8 0.375,38.087 45.63,0.375 "/>
+                    </svg>  
+                  </button>
+                
+                <button class="right" onclick="verConteudo('dv-modal', 'next')">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                      <polyline fill="none"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                      0.375,0.375 45.63,38.087 0.375,75.8 "/>
+                    </svg>
+                </button>
+                <button class="btn" onclick="fecharConteudo('dv-modal')">X</button>
+            </div>
+            
+            <p class="subject"></p><!--Vai receber o nome do assunto do grupo-->
+            <p class="component-name">OBJETIVOS</p><!--Nome do componente do grupo-->
+            <br>
+            <p class="modal-header"></p><!--Tópico do componente-->
+            <br>
+            <p class="modal-content">
+                Os Objetivos é objetivar todos os que são classificados como objetivos
+            </p><!--Conteúdo do componente-->
+            
+        </div>
+
+    </div>   
+
+</section>
+<footer>
+    <p>
+        <span class="piscar"></span>
+    </p>
+</footer>
 </body>
 <script src="script/script.js"></script>
 

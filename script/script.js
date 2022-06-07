@@ -13,8 +13,8 @@ var passador = 0 // Posteriormente sera usada para passar e voltar os assuntos
 //INICIO DE TUDO QUE ESTARÁ NO MODAL
 assunto.innerHTML = 'DATA MODEL' // TEMA DA NAÇÃO REGGUEIRA que aparecerá no modal
 var arthurtitle = 'ARTHUR' // Nome dos integrantes que aparecerá no modal
-var arthurcontent = '<desc id="arthur">Pass</desc> <desc id="arthur">the</desc> <desc id="arthur">mouse</desc>' // ASSUNTO que estará no modal
-var arthurheader = '<br>[ASSUNTO]' // Nome do assunto que estará no modal
+var arthurcontent = 'Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects.<br>Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory.The id() function returns an integer representing its identity.<br><br><img src="style/id.png" alt="" style="width: 50%"><br><Br>An object’s type determines the operations that the object supports and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable.<br><br><img src="style/type.png" style="width: 50%"><br><br>The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable.An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable.<br><strong>CPython implementation detail:</strong> CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. <br><br><strong>The standard type hierarchy</strong><Br>None: It is used to signify the absence of a value in many situations, e.g., it is returned from functions that don’t explicitly return anything. Its truth value is false<br><br>numbers.Number:These are created by numeric literals and returned as results by arithmetic operators and arithmetic built-in functions. Numeric objects are immutable; once created their value never changes. Python numbers are of course strongly related to mathematical numbers, but subject to the limitations of numerical representation in computers.The string representations of the numeric classes, computed by __repr__() and __str__(), have the following properties:'// ASSUNTO que estará no modal
+var arthurheader = '<br>Objects, values and types & The standard type hierarchy' // Nome do assunto que estará no modal
 
 var davititle = 'DAVI'
 var davicontent = '<desc id="davi">Pass</desc> <desc id="davi">the</desc> <desc id="davi">mouse</desc>'
@@ -64,7 +64,7 @@ function verConteudo(mn, pessoa){
     if (pessoa === 1 || passador === 1){
         titulo.innerHTML = arthurtitle
         conteudo.innerHTML = arthurcontent
-        traducao('arthur') // Chama a função de traduzir
+        //traducao('arthur') // Chama a função de traduzir
         topico.innerHTML = arthurheader
     }else if (pessoa === 2 || passador === 2){
         titulo.innerHTML = davititle
@@ -108,17 +108,17 @@ function fecharConteudo(mn){
 function traducao(nome){
     var palavras = [] // Inicializa a variavel vazia, para depois atribuir valores a ela
     if (nome === 'arthur'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>') // É AQUI QUE VEM AS PALAVRAS TRADUZIDAS!
+        palavras.push('') // É AQUI QUE VEM AS PALAVRAS TRADUZIDAS!
     }else if(nome === 'davi'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>')
+        palavras.push('')
     }else if(nome === 'gefferson'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>')
+        palavras.push('')
     }else if(nome === 'ithalo'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>')
+        palavras.push('')
     }else if(nome === 'pedro'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>')
+        palavras.push('')
     }else if(nome === 'wesley'){
-        palavras.push('<strong>Passe</strong>', '<strong>o</strong>', '<strong>mouse</strong>')
+        palavras.push('')
     }
     for (let pos in palavras){
         let element = document.querySelectorAll("#" + nome)[pos]

@@ -59,7 +59,7 @@ function verConteudo(mn, pessoa){
             passador--
         }
     }
-    for(let c = 1; c <= 6; c++) { // Atribuir o numero da [pessoa] a variavel [passador]
+    for(let c = 1; c <= 7; c++) { // Atribuir o numero da [pessoa] a variavel [passador]
         (pessoa === c) ? passador = c : false
     }
     if (pessoa === 1 || passador === 1){

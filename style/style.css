@@ -275,41 +275,15 @@ footer{
     }
 }
 
-/* .modal{
-    background-color: rgba(0, 0, 0, .85);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    animation: animate;
-    animation-duration: 400ms;
-} */
-@keyframes animate {
-    from{
-        opacity: 1;
-    }
-    from{
-        opacity: 0;
-    }
-}
-/* .modal-content{
-    margin: 0 auto;
-    margin-top: 1%;
-    max-width: 600px;
-    background-color: #eee;
-    padding: 0;
-    box-shadow: 0 0 2px #ffffff;
-} */
-
 .modal{
-    background-color: rgba(0, 0, 0, .90);
+    background-color: rgba(0, 0, 0, .93);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height:100%;
+	animation: animate;
+	animation-duration: 800ms;
 }
 
 .body-modal{
@@ -324,6 +298,10 @@ footer{
     border-radius: 14px;
     height: 90%;
 
+}
+@keyframes animate{
+	from{opacity: 1;}
+	from{opacity: 0;}
 }
 
 .subtitle-modal {

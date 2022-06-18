@@ -13,7 +13,8 @@ var passador = 0 // Posteriormente sera usada para passar e voltar os assuntos
 //INICIO DE TUDO QUE ESTARÁ NO MODAL
 assunto.innerHTML = 'DATA MODEL' // TEMA DA NAÇÃO REGGUEIRA que aparecerá no modal
 var arthurtitle = 'ARTHUR' // Nome dos integrantes que aparecerá no modal
-var arthurcontent = 'Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects.<br>Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory.The id() function returns an integer representing its identity.<br><br><img src="style/id.png" alt="" style="width: 50%"><br><Br>An object’s type determines the operations that the object supports and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable.<br><br><img src="style/type.png" style="width: 50%"><br><br>The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable.An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable.<br><strong>CPython implementation detail:</strong> CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. <br><br><strong>The standard type hierarchy</strong><Br>None: It is used to signify the absence of a value in many situations, e.g., it is returned from functions that don’t explicitly return anything. Its truth value is false<br><br>numbers.Number:These are created by numeric literals and returned as results by arithmetic operators and arithmetic built-in functions. Numeric objects are immutable; once created their value never changes. Python numbers are of course strongly related to mathematical numbers, but subject to the limitations of numerical representation in computers.The string representations of the numeric classes, computed by __repr__() and __str__(), have the following properties:'// ASSUNTO que estará no modal
+var arthurcontent = 'Objects are <font color="#00FF00">Python’s abstraction</font> for data. All data in a <font color="#00FF00">Python program</font> is represented by objects or by relations between objects.<br>Every object has an identity, a type and a value. An <font color="#00FF00">object’s identity</font> never changes once it has been created; you <font color="#FF0000">may</font> think of it as the <font color="#00FF00">object’s address</font> in memory.The id() function returns an integer representing its identity.<br><br><img src="style/id.png" alt="" style="width: 50%"><br><Br>An object’s type determines the operations that the object supports and also defines the possible values for objects of that type. <font color="#00FF00">The type() function returns an object’s type</font> (which is an object itself). Like its identity, an object’s type is also <font color="#FFD700">unchangeable</font>.<br><br><img src="style/type.png" style="width: 50%"><br><br>The value of some objects <font color="#FF0000">can</font> change. Objects whose value <font color="#FF0000">can</font> change are said to be <font color="#FFD700">mutable</font>; objects whose value is <font color="#FFD700">unchangeable</font> once they are created are called <font color="#FFD700">immutable</font>.An object’s <font color="#FFD700">mutability</font> is determined by its type; for instance, numbers, <font color="#FFD700">strings</font> and <font color="#FFD700">tuples</font> are <font color="#FFD700">immutable</font>, while dictionaries and lists are <font color="#FFD700">mutable</font>.'// ASSUNTO que estará no modal
+var arthurcontent2 = '<strong>CPython implementation detail:</strong> CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references.<br><strong>The standard type hierarchy</strong><br>None: It is used to signify the absence of a value in many situations, e.g., it is returned from functions that don’t explicitly return anything. Its truth value is false<br>numbers.Number:These are created by numeric literals and returned as results by <font color="#00FF00">arithmetic operators</font> and arithmetic built-in functions. <font color="#00FF00">Numeric objects</font> are <font color="#FFD700">immutable</font>; once created their value never changes. <font color="#00FF00">Python numbers</font> are of course strongly related to mathematical numbers, but subject to the limitations of numerical representation in computers.<br>The string representations of the numeric classes, computed by <font color="#FFD700">__repr__()</font> and <font color="#FFD700">__str__()</font>, have the following properties:<br><br><font color="#00FF00">They are valid numeric literals which</font>, when passed to their class constructor, produce an object having the value of the original numeric.<br>The representation is in base 10, when possible.<br>Leading zeros, possibly excepting a single zero before a decimal point, are not shown.<br>Trailing zeros, possibly excepting a single zero after a decimal point, are not shown.<br>A sign is shown only when the number is negative.<br>Python distinguishes between integers, <font color="#FFD700">floating point numbers</font>, and complex numbers:'
 var arthurheader = '<br>Objects, values and types & The standard type hierarchy' // Nome do assunto que estará no modal
 
 var davititle = 'DAVI'
@@ -50,11 +51,11 @@ function verConteudo(mn, pessoa){
     tads.innerHTML = ''
     if (pessoa === 'next'){
         (passador === 0) ? passador++ : false // Se passador ser igual a 0 ele já incrementa para o 1
-        if (passador >= 1 && passador < 6) { // Passar os Cards
+        if (passador >= 1 && passador < 7) { // Passar os Cards
             passador++
         }
     }else if(pessoa === 'back'){
-        if (passador > 1 && passador <= 7) { // Voltar os cards
+        if (passador > 1 && passador <= 8) { // Voltar os cards
             passador--
         }
     }
@@ -67,32 +68,38 @@ function verConteudo(mn, pessoa){
         //traducao('arthur') // Chama a função de traduzir
         topico.innerHTML = arthurheader
     }else if (pessoa === 2 || passador === 2){
-        titulo.innerHTML = davititle
+		titulo.innerHTML = arthurtitle
+        conteudo.innerHTML = arthurcontent2
+        //traducao('arthur') // Chama a função de traduzir
+        topico.innerHTML = arthurheader
+	}else if (pessoa === 3 || passador === 3){
+		titulo.innerHTML = davititle
         conteudo.innerHTML = davicontent
         traducao('davi')
         topico.innerHTML = daviheader
-    }else if (pessoa === 3 || passador === 3){
+    }else if (pessoa === 4 || passador === 4){
         titulo.innerHTML = geffersontitle
         conteudo.innerHTML = geffersoncontent
         traducao('gefferson')
         topico.innerHTML = geffersonheader
-    }else if (pessoa === 4 || passador === 4){
+    }else if (pessoa === 5 || passador === 5){
         titulo.innerHTML = ithalotitle
         conteudo.innerHTML = ithalocontent
         traducao('ithalo')
         topico.innerHTML = italoheader
-    }else if (pessoa === 5 || passador === 5){
+    }else if (pessoa === 6 || passador === 6){
         titulo.innerHTML = pedrotitle
         conteudo.innerHTML = pedrocontent
         traducao('pedro')
         topico.innerHTML = pedroheader
-    }else if (pessoa === 6 || passador === 6){
+    }else if (pessoa === 7 || passador === 7){
         titulo.innerHTML = wesleytitle
         conteudo.innerHTML = wesleycontent
         traducao('wesley')
         topico.innerHTML = wesleyheader
     }
 }
+
 
 function fecharConteudo(mn){
     assunto.style.display = 'block';
